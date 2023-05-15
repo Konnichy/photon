@@ -305,7 +305,7 @@ def main():
     module = AnsibleModule(
         argument_spec=dict(
             state=dict(default="present", choices=choices),
-            name=dict(type="list", elements="str", aliases=["pkg"]),
+            name=dict(type="list", default=[], elements="str", aliases=["pkg"]),
             update_cache=dict(default=False, type="bool"),
             upgrade=dict(default=False, type="bool"),
             enablerepo=dict(type="list", default=[], elements="str"),
